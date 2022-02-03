@@ -1,0 +1,26 @@
+{
+    "sourceFile": "metro.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1643917817998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643917829222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,14 @@\n     resolver: {sourceExts, assetExts},\n   } = await getDefaultConfig();\n   return {\n     transformer: {\n+      getTransformOptions: async () => ({\n+        transform: {\n+          experimentalImportSupport: false,\n+          inlineRequires: true,\n+        },\n+      }),\n       babelTransformerPath: require.resolve('react-native-svg-transformer'),\n     },\n     resolver: {\n       assetExts: assetExts.filter(ext => ext !== 'svg'),\n"
+                },
+                {
+                    "date": 1643917837016,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,4 @@\n-/**\n- * Metro configuration for React Native\n- * https://github.com/facebook/react-native\n- *\n- * @format\n- */\n-\n-module.exports = {\n-  transformer: {\n-    getTransformOptions: async () => ({\n-      transform: {\n-        experimentalImportSupport: false,\n-        inlineRequires: true,\n-      },\n-    }),\n-  },\n-};\n const {getDefaultConfig} = require('metro-config');\n \n module.exports = (async () => {\n   const {\n"
+                }
+            ],
+            "date": 1643917817998,
+            "name": "Commit-0",
+            "content": "/**\n * Metro configuration for React Native\n * https://github.com/facebook/react-native\n *\n * @format\n */\n\nmodule.exports = {\n  transformer: {\n    getTransformOptions: async () => ({\n      transform: {\n        experimentalImportSupport: false,\n        inlineRequires: true,\n      },\n    }),\n  },\n};\nconst {getDefaultConfig} = require('metro-config');\n\nmodule.exports = (async () => {\n  const {\n    resolver: {sourceExts, assetExts},\n  } = await getDefaultConfig();\n  return {\n    transformer: {\n      babelTransformerPath: require.resolve('react-native-svg-transformer'),\n    },\n    resolver: {\n      assetExts: assetExts.filter(ext => ext !== 'svg'),\n      sourceExts: [...sourceExts, 'svg'],\n    },\n  };\n})();"
+        }
+    ]
+}

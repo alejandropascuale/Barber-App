@@ -1,0 +1,30 @@
+{
+    "sourceFile": "index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1643916982799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643916994644,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /**\n  * @format\n  */\n-import \n+import 'react'\n import {AppRegistry} from 'react-native';\n import App from './App';\n import {name as appName} from './app.json';\n \n"
+                },
+                {
+                    "date": 1643917001755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /**\n  * @format\n  */\n-import 'react'\n+import 'react-native-ges'\n import {AppRegistry} from 'react-native';\n import App from './App';\n import {name as appName} from './app.json';\n \n"
+                },
+                {
+                    "date": 1643917008817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /**\n  * @format\n  */\n-import 'react-native-ges'\n+import 'react-native-gesture-handler'\n import {AppRegistry} from 'react-native';\n import App from './App';\n import {name as appName} from './app.json';\n \n"
+                }
+            ],
+            "date": 1643916982799,
+            "name": "Commit-0",
+            "content": "/**\n * @format\n */\nimport \nimport {AppRegistry} from 'react-native';\nimport App from './App';\nimport {name as appName} from './app.json';\n\nAppRegistry.registerComponent(appName, () => App);\n"
+        }
+    ]
+}
